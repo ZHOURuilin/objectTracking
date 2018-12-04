@@ -64,7 +64,7 @@ for frame=startFrame:endFrame
     F_Template=(conj(F_im.*conj(F_response))./(F_im.*conj(F_im)+eps));%相关滤波器$H^*$更新
     %% 画跟踪框
 %         subplot(1,2,2)
-    rect_position = [pos([2,1]) - (target_sz([2,1])/2), (target_sz([2,1]))]; %新跟踪框位置y,x,heigth,width,
+    rect_position = [pos([2,1]) - (target_sz([2,1])/2), (target_sz([2,1]))]; %新跟踪框位置y,x,height,width,
     if frame == 1  %first frame, create GUI
             figure
             im_handle = imagesc(uint8(img));%将矩阵中的元素数值按大小转化为不同颜色，并在坐标轴对应位置处以这种颜色染色。

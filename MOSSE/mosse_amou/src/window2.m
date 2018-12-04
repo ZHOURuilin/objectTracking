@@ -34,13 +34,13 @@
 
 function w=window2(N,M,w_func)
 
-wr=window(w_func,N);%wr为一维列向量,维度为heigth x 1
+wr=window(w_func,N);%wr为一维列向量,维度为height x 1
 wc=window(w_func,M);%wc为一维列向量,维度为width x 1
 % disp("wr")
 % size(wr)
 % disp("wc")
 % size(wc)
-[maskr,maskc]=meshgrid(wc,wr);%meshgrid函数绘制二维或三维网络.maskr与maskc的维度一样,均为heigth x width
+[maskr,maskc]=meshgrid(wc,wr);%meshgrid函数绘制二维或三维网络.maskr与maskc的维度一样,均为height x width
 %[X,Y]=meshgrid(x,y)基于向量x和y中包含的坐标返回二维网格坐标。X 是一个矩阵,每一行是x的一个副本;Y也是一个矩阵,每一列是y的一个副本.坐标X和Y表示的网格有length(y)个行和length(x)个列。
 %maskc=repmat(wc,1,M); Old version
 %maskr=repmat(wr',N,1);

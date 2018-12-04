@@ -1,6 +1,6 @@
 function target_box = getsubbox(pos,target_sz,im)
 	%get and process the context region
-	xs = floor(pos(2) + (1:target_sz(2)) - (target_sz(2)/2));%以pos为中心，以heigh与width为高宽，界定框的范围(坐标值)
+	xs = floor(pos(2) + (1:target_sz(2)) - (target_sz(2)/2));%以pos为中心，以height与width为高宽，界定框的范围(坐标值)
 	ys = floor(pos(1) + (1:target_sz(1)) - (target_sz(1)/2));
 	
 	%check for out-of-bounds coordinates, and set them to the values at

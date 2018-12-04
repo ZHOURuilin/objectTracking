@@ -2,7 +2,7 @@
 %为了解决上述问题,进行数据预处理.
 %注:要进行加窗操作一般在时域中进行,因为在时域中是点乘操作,在频域中是卷积操作.因此加窗操作是在傅里叶变换之前
 function img = preprocess(img)
-[r,c] = size(img);%r=heigth(row),c=width(column)
+[r,c] = size(img);%r=height(row),c=width(column)
 win = window2(r,c,@hann);%生成即将加到数字信号上的汉宁窗
 % eps = 1e-5;%加入噪声,增强模型鲁棒性
 % img = double(img) / 255;
