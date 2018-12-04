@@ -29,7 +29,7 @@ end
 %% set initial position and size
 target_sz = [ground_truth(1,4), ground_truth(1,3)];%目标height和width
 pos = [ground_truth(1,2), ground_truth(1,1)] + floor(target_sz/2);%目标中心点位置。floor-向负无穷大方向取整操作
-positions = zeros(numel(img_files), 2);  %to calculate precision；若是一幅图像，numel将给出它的像素数
+positions = zeros(numel(img_files), 2);  %to calculate precision；numel返回数组中元素个数,若是一幅图像，numel将给出它的像素数
 %产生高斯理想模板
 F_response=templateGauss(target_sz,im);%高斯理想模板
 %% 主循环读取全部图像帧
