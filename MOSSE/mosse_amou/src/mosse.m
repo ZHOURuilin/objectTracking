@@ -40,7 +40,8 @@ G = fft2(g);%二维快速傅里叶变换,将时域问题转为频域问题,得�
             %傅里叶变换的基本思想是:任何连续测量的时序或信号，都可以表示为不同频率的正弦波信号的无限叠加(带棱角的信号可以被无限接近).
 height = size(g,1);%取出剪切图像g的height
 width = size(g,2);%取出剪切图像g的width
-fi = preprocess(imresize(img, [height width]));%imresize(A, [numrows numcols]),numrows和numcols分别指定目标图像的高度和宽度。
+fi = preprocess(imresize(img, [height width]));%imresize缩放图像函数。imresize(A, [numrows numcols]),numrows和numcols分别指定目标图像的高度和宽度。
+                                               %imresize 使用双三次方插值方法实现的图片缩放。
                                                %显而易见,由于这种格式允许图像缩放后长宽比例和源图像长宽比例不相同,因此所产生的图像有可能发生畸变。
 Ai = (G.*conj(fft2(fi)));%conj函数：用于计算复数的共轭值
 Bi = (fft2(fi).*conj(fft2(fi)));
