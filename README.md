@@ -9,15 +9,15 @@
 - **MOSSE**: David S. Bolme, J. Ross Beveridge, Bruce A. Draper, Yui Man Lui. "Visual Object Tracking using Adaptive Correlation Filters", ICCV(2010). [[paper]](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.294.4992&rep=rep1&type=pdf) [[project]](http://www.cs.colostate.edu/~vision/ocof_toolset_2012/index.php)
 
 # Visual Tracker Benchmark && Datasets
-- **OTB2013**: Wu Yi, Jongwoo Lim, Ming-Hsuan Yang. "Online Object Tracking: A Benchmark", CVPR (2013). [[paper]](http://faculty.ucmerced.edu/mhyang/papers/cvpr13_benchmark.pdf)
+- **OTB2013**：Wu Yi, Jongwoo Lim, Ming-Hsuan Yang. "Online Object Tracking: A Benchmark", CVPR (2013). [[paper]](http://faculty.ucmerced.edu/mhyang/papers/cvpr13_benchmark.pdf)
 
 - **OTB2015**：Wu Yi, Jongwoo Lim, Ming-Hsuan Yang. "Object Tracking Benchmark", TPAMI(2015). [[paper]](http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7001050&tag=1) [[project]](http://cvlab.hanyang.ac.kr/tracker_benchmark/index.html)
 
-- **VOT**:[[project]](http://www.votchallenge.net/index.html)
+- **VOT**：[[project]](http://www.votchallenge.net/index.html)
 
-- **TColor-128**: Pengpeng Liang, Erik Blasch, Haibin Ling. "Encoding color information for visual tracking: Algorithms and benchmark", TIP(2015). [[paper]](http://www.dabi.temple.edu/~hbling/publication/TColor-128.pdf) [[project]](http://www.dabi.temple.edu/~hbling/data/TColor-128/TColor-128.html)
+- **TColor-128**：Pengpeng Liang, Erik Blasch, Haibin Ling. "Encoding color information for visual tracking: Algorithms and benchmark", TIP(2015). [[paper]](http://www.dabi.temple.edu/~hbling/publication/TColor-128.pdf) [[project]](http://www.dabi.temple.edu/~hbling/data/TColor-128/TColor-128.html)
 
-- **UAV123**:Matthias Mueller, Neil Smith, Bernard Ghanem. "A Benchmark and Simulator for UAV Tracking", ECCV(2016). [[paper]](https://ivul.kaust.edu.sa/Documents/Publications/2016/A%20Benchmark%20and%20Simulator%20for%20UAV%20Tracking.pdf) [[project]](https://ivul.kaust.edu.sa/Pages/pub-benchmark-simulator-uav.aspx)
+- **UAV123**：Matthias Mueller, Neil Smith, Bernard Ghanem. "A Benchmark and Simulator for UAV Tracking", ECCV(2016). [[paper]](https://ivul.kaust.edu.sa/Documents/Publications/2016/A%20Benchmark%20and%20Simulator%20for%20UAV%20Tracking.pdf) [[project]](https://ivul.kaust.edu.sa/Pages/pub-benchmark-simulator-uav.aspx)
 
 # Latest research paper
 [dblp:TPAMI](https://dblp.uni-trier.de/db/journals/pami/index.html)
