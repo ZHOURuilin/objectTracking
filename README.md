@@ -24,7 +24,7 @@
 
 # 膜拜大神
 - [Martin Danelljan](http://users.isy.liu.se/cvl/marda26/)-马丁大神
-- [Luca Bertinetto](http://www.robots.ox.ac.uk/~luca/) [Luca Bertinetto's_GitHub](https://github.com/bertinetto)
+- [Luca Bertinetto](http://www.robots.ox.ac.uk/~luca/)——[Luca Bertinetto's_GitHub](https://github.com/bertinetto)
 - [ Ming-Hsuan Yang](http://faculty.ucmerced.edu/mhyang/)
 - [HEscop](https://github.com/HEscop/TBCF)
 - [foolwood](https://github.com/foolwood/benchmark_results)
