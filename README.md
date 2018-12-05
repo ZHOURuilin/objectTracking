@@ -23,6 +23,9 @@
 [dblp:TPAMI](https://dblp.uni-trier.de/db/journals/pami/index.html)
 
 # 膜拜大神
+- [Martin Danelljan](http://users.isy.liu.se/cvl/marda26/)-马丁大神
+- [Luca Bertinetto](http://www.robots.ox.ac.uk/~luca/) [Luca Bertinetto's_GitHub](https://github.com/bertinetto)
+- [ Ming-Hsuan Yang](http://faculty.ucmerced.edu/mhyang/)
 - [HEscop](https://github.com/HEscop/TBCF)
 - [foolwood](https://github.com/foolwood/benchmark_results)
 - [小小菜鸟一只](https://blog.csdn.net/crazyice521/article/details/70238542)
