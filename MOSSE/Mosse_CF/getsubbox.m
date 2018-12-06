@@ -13,5 +13,6 @@ function target_box = getsubbox(pos,target_sz,im)
 	target_box = im(ys, xs, :);	
 	%pre-process window
     target_box = double(target_box);
-    target_box = (target_box-mean(target_box(:)));%减小运算数值
+    target_box = (target_box-mean(target_box(:)));%截取的图像，这样同时减去一个数不会改变大小关系，但减小运算数值，方便计算
+
 end

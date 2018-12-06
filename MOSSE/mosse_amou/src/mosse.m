@@ -1,7 +1,7 @@
 clear ;clc
 % get images from source directory
 datadir = '/home/qiujiedong/project/MatLAB_workspace/configSeqs/OTB-100/';
-dataset = 'Surfer';
+dataset = 'RedTeam';
 path = [datadir dataset];
 img_path = [path '/img/'];
 D = dir([img_path, '*.jpg']); % return a list of all the files in the current path and the folders
@@ -27,7 +27,7 @@ a = 10;
 gsize = size(im);%获得image像素的(row*column*channel)
 [R,C] = ndgrid(1:gsize(1), 1:gsize(2));%R与C均为gsize(1)行,gsize(2)列,其中R为以1为步长,从1到gsize(1)进行列排列,C为从1到gsize(2)进行行排列
 g = gaussC(C,R, sigma, a, center);
-g = mat2gray(g);%将图像矩阵g归一化为图像矩阵g，归一化后矩阵中每个元素的值都在0到1范围内（包括0和1),其中0表示黑色,1表示白色.
+g = mat2gray(g);%将图像矩阵g归一化为图像矩阵g，归一化后矩阵中每个元素的值都在0到1范围内（包括0和1),其中0表示黑色,255表示白色.
 
 % randomly warp original image to create training set
 if (size(im,3) == 3) %image channel
@@ -73,7 +73,8 @@ for i = 1:size(img_files, 1) %依次取出所有图片
         try
             Hi = Ai ./ Bi;%对应相除
             fi = imcrop(img, rect); 
-            fi = preprocess(imresize(fi, [height width]));
+            fi = preprocess(imresize(fi, [height width]));%这里截图之后直接对新帧的图像进行加窗，虽说解决了频谱泄露问题，但是也将新帧关于上一帧的中心位置
+                                                          %突出了，但可能这并不是当前帧的中心位置，因此会出现漂移。
             gi = uint8(255*mat2gray(real(ifft2(Hi.*fft2(fi)))));%mat2gray将矩阵归一化.real取复数实部,imag取复数虚部.ifft2快速傅里叶反变换
                                                                 %这里归一化然后乘以255再转换成8位操作,是因为8位图像数值为0-255.
             maxval = max(gi(:)); %取得gi矩阵中最大值

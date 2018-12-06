@@ -12,7 +12,7 @@ clear all;clc;
 % [videoData,ground_truth] = Load_video(videoDir);%调用函数读取视频，读取groundtruth数据
 % img = read(videoData,1);% 读取第一帧
 %% 载入图片文件
-imgDir='/home/qiujiedong/project/MatLAB_workspace/configSeqs/OTB-100/Surfer';%图片文件夹路径名
+imgDir='/home/qiujiedong/project/MatLAB_workspace/configSeqs/OTB-100/Basketball';%图片文件夹路径名
 [ground_truth,img_path,img_files]=Load_image(imgDir);%调用函数读取图片帧，读取groundtruth数据
 img = imread([img_path img_files{1}]);%读取目标帧
 %% 起始帧，终止帧
@@ -45,7 +45,7 @@ for frame=startFrame:endFrame
         else
             im = rgb2gray(img);%转换为灰度图
         end
-        target_box=getsubbox(pos,target_sz,im);%获取目标框s
+        target_box=getsubbox(pos,target_sz,im);%获取目标框
         tic()
        %% 训练结束开始跟踪并更新模板
     if frame>startFrame
@@ -59,8 +59,14 @@ for frame=startFrame:endFrame
     %%
     %save position and calculate FPS
 	positions(frame,:) = pos;
-    F_im= fft2(getsubbox(pos,target_sz,im));%对剪切出的目标图像进行卷积
-%     F_Template=F_response./(F_im+eps);%CF模板更新  
+    F_im= fft2(getsubbox(pos,target_sz,im));%对剪切出的目标图像进行傅里叶变换,但经FFT后，F_im内有了负值
+%     F_im=templateGauss(target_sz,F_im);%这是我自己加的在这里对傅里叶变换后的图像进行高斯处理。通过运行各个数据集发现一个问题，
+                       %当原代码在运行时，会输出相关性大的位置作为响应最大值输出，但注意一点是，相关性大有时候会漂移不是目标中心点。
+                       %由于并未对新一帧图像做任何处理，当背景连续两帧出现在跟踪区域内，那在相关性上来说，这两帧在背景区域的相关性值也会很高，如果这个
+                       %值超过目标中心点的值，那么就会造成漂移，这样就会造成以背景为主了，慢慢的会丢失目标。还有一种情况是如果背景中出现与目标上像素值
+                       %一样的(如RedTeam数据集车上面有白色，而经过白色电线杆时就会误认为电线杆为目标)，认为电线杆正好也是白色，当与跟踪器相乘时，其相关性值
+                       %也会很大，就会被误认为目标，这似乎是目标跟踪中另一个问题，就是目标与背景颜色相近的研究。
+                       %但是加上高斯处理后，产生的新问题是，目标产生形变或旋转时，由于会造成目标中心移动，因此跟踪效果会不好。
     F_Template=(conj(F_im.*conj(F_response))./(F_im.*conj(F_im)+eps));%相关滤波器$H^*$更新
     %% 画跟踪框
 %         subplot(1,2,2)
