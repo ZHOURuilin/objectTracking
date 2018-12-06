@@ -1,8 +1,11 @@
+## 说明
+此代码为官方给出的CSK源码，本人根据论文对的代码增加了详细的注释，有些部分做了详细的解释。
 
+## 原文档的readme.txt
 This MATLAB code implements a GUI for the tracking algorithm described in:
 
 
-Jo�o F. Henriques, Rui Caseiro, Pedro Martins, and Jorge Batista,
+João F. Henriques, Rui Caseiro, Pedro Martins, and Jorge Batista,
 "Exploiting the Circulant Structure of Tracking-by-detection with Kernels,"
 ECCV, 2012.
 
@@ -24,6 +27,6 @@ contain a text file in MILTrack's ground truth format, with bounding box
 coordinates for at least the first frame, to initialize the tracker.
 
 
-Jo�o F. Henriques, 2012
+João F. Henriques, 2012
 http://www.isr.uc.pt/~henriques/
 
