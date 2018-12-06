@@ -8,6 +8,8 @@
 
 - **MOSSE**: David S. Bolme, J. Ross Beveridge, Bruce A. Draper, Yui Man Lui. "Visual Object Tracking using Adaptive Correlation Filters", ICCV(2010). [[paper]](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.294.4992&rep=rep1&type=pdf) [[project]](http://www.cs.colostate.edu/~vision/ocof_toolset_2012/index.php)
 
+- **CSK**：João F,Henriques,Rui Caseiro,Pedro Martins,Jorge Batista. "Exploiting the Circulant Structure of Tracking-by-detection with Kernels". ECCV(2012). [paper](http://www.robots.ox.ac.uk/~joao/publications/henriques_eccv2012.pdf) [project](http://www.robots.ox.ac.uk/~joao/circulant/) 
+
 # Visual Tracker Benchmark && Datasets
 - **OTB2013**：Wu Yi, Jongwoo Lim, Ming-Hsuan Yang. "Online Object Tracking: A Benchmark", CVPR (2013). [[paper]](http://faculty.ucmerced.edu/mhyang/papers/cvpr13_benchmark.pdf)
 
