@@ -38,7 +38,8 @@ function k = dense_gauss_kernel(sigma, x, y)
 	xyf = xf .* conj(yf); %论文中Eq.4
 % 	xy = real(circshift(ifft2(xyf), floor(size(x)/2)));  %to spatial domain
                                %circshift循环移位的函数,同时对矩阵进行行和列的移位则令circshift(A,[col, row])，其中col表示列位移，row表示行位移
-                               %由论文Eq.4可知C(u)v=$F^{-1}$($F^*(u)$互相关F(v)),也就是说C(y)x=ifft(xyf)=ifft(xf.*conj(yf)),可以看到这里已经对y
+                              
+			       %由论文Eq.4可知C(u)v=$F^{-1}$($F^*(u)$互相关F(v)),也就是说C(y)x=ifft(xyf)=ifft(xf.*conj(yf)),可以看到这里已经对y
                                %进行了循环矩阵操作，而C(y)x是将y进行循环后求得其与x的互相关性。
     xy = real(fftshift(ifft2(xyf)));%MATLAB官方文档给出的将零频分量移到频谱中心的函数是fftshift,上面的的circshift(ifft2(xyf), floor(size(x)/2))实现的
                                     %功能也是将零频分量移到频谱中心，只是fftshift更像是执行块操作（如果 X 是矩阵，则 fftshift 会将 X 的第一象限与
