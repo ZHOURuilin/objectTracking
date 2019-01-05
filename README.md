@@ -10,6 +10,8 @@
 
 - **CSK**：João F,Henriques,Rui Caseiro,Pedro Martins,Jorge Batista. "Exploiting the Circulant Structure of Tracking-by-detection with Kernels". ECCV(2012). [[paper]](http://www.robots.ox.ac.uk/~joao/publications/henriques_eccv2012.pdf) [[project]](http://www.robots.ox.ac.uk/~joao/circulant/) 
 
+- **KCF**: João F. Henriques, Rui Caseiro, Pedro Martins, Jorge Batista. "High-Speed Tracking with Kernelized Correlation Filters". TPAMI (2015). [[paper]](http://www.robots.ox.ac.uk/~joao/publications/henriques_tpami2015.pdf)[[project]](http://www.robots.ox.ac.uk/~joao/circulant/)
+
 # Visual Tracker Benchmark && Datasets
 - **OTB2013**：Wu Yi, Jongwoo Lim, Ming-Hsuan Yang. "Online Object Tracking: A Benchmark", CVPR (2013). [[paper]](http://faculty.ucmerced.edu/mhyang/papers/cvpr13_benchmark.pdf)
 
