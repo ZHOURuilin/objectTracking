@@ -28,7 +28,7 @@ function x = get_features(im, features, cell_size, cos_window)
 		%gray-level (scalar feature)
 		x = double(im) / 255; %将像素值归一化到0-1之间
 		
-		x = x - mean(x(:));%将x变成关于(0,0)对称
+		x = x - mean(x(:));%将x归一化到(-0.5,0.5),这在CSK中提出的
 	end
 	
 	%process with cosine window if needed
