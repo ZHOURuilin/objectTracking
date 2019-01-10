@@ -54,7 +54,7 @@ function [img_files, pos, target_sz, ground_truth, video_path] = load_video_info
 		ground_truth = [];
 	else
 		%store positions instead of boxes
-		ground_truth = ground_truth(:,[2,1]) + ground_truth(:,[4,3]) / 2;%ground_truth转换成目标中心坐标
+		ground_truth = ground_truth(:,[2,1]) + (ground_truth(:,[4,3])) / 2;%ground_truth转换成目标中心坐标
 	end
 	
 	

@@ -105,7 +105,6 @@ function [positions, time] = tracker(video_path, img_files, pos, target_sz, ...
 				kzf = linear_correlation(zf, model_xf);
 			end
 			response = real(ifft2(model_alphaf .* kzf));  %equation for fast detection，论文中Eq.(15)
-
 			%target location is at the maximum response. we must take into
 			%account the fact that, if the target doesn't move, the peak
 			%will appear at the top-left(左上方) corner, not at the center (this is
@@ -138,7 +137,7 @@ function [positions, time] = tracker(video_path, img_files, pos, target_sz, ...
 		if frame == 1  %first frame, train with a single image
 			model_alphaf = alphaf;
 			model_xf = xf;
-		else
+        else
 			%subsequent frames, interpolate model %线性插值
 			model_alphaf = (1 - interp_factor) * model_alphaf + interp_factor * alphaf;
 			model_xf = (1 - interp_factor) * model_xf + interp_factor * xf;
