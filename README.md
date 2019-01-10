@@ -12,6 +12,8 @@
 
 - **KCF**: João F. Henriques, Rui Caseiro, Pedro Martins, Jorge Batista. "High-Speed Tracking with Kernelized Correlation Filters", TPAMI (2015). [[paper]](http://www.robots.ox.ac.uk/~joao/publications/henriques_tpami2015.pdf)[[project]](http://www.robots.ox.ac.uk/~joao/circulant/)
 
+- **CN**: Martin Danelljan, Fahad Shahbaz Khan, Michael Felsberg ,Joost van de Weijer. "Adaptive Color Attributes for Real-Time Visual Tracking", CVPR (2014).[[paper]](http://www.cvl.isy.liu.se/research/objrec/visualtracking/colvistrack/CN_Tracking_CVPR14.pdf)[[project]](http://www.cvl.isy.liu.se/research/objrec/visualtracking/colvistrack/index.html)
+
 # Visual Tracker Benchmark && Datasets
 - **OTB2013**：Wu Yi, Jongwoo Lim, Ming-Hsuan Yang. "Online Object Tracking: A Benchmark", CVPR (2013). [[paper]](http://faculty.ucmerced.edu/mhyang/papers/cvpr13_benchmark.pdf)
 
